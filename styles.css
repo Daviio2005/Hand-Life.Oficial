@@ -1,0 +1,149 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #4a4e69;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Pantallas Centradas */
+.screen {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botones */
+button {
+    background-color: #6e8efb;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a4e69;
+}
+
+/* Footer */
+footer {
+    background-color: #4a4e69;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Diseño Responsivo */
+
+/* Para Tablets y Dispositivos Pequeños */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: 16px;
+    }
+
+    .screen {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+
+/* Para Teléfonos Móviles */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .nombre-empresa {
+        font-size: 20px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .screen {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

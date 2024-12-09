@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand-Life</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <h2 class="nombre-empresa">Hand-Life</h2>
+        </div>
+        <nav>
+            <a href="#" class="nav-link" data-section="medical-form-screen">Inicio</a>
+            <a href="#" class="nav-link" data-section="nosotros-screen">Nosotros</a>
+            <a href="#" class="nav-link" data-section="contacto-screen">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Login -->
+    <div id="login-screen" class="screen">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <label for="login-username">Usuario:</label>
+            <input type="text" id="login-username" required>
+            <br>
+            <label for="login-password">Contraseña:</label>
+            <input type="password" id="login-password" required>
+            <br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="login-error" style="color: red; display: none;">Usuario o contraseña incorrectos.</p>
+        <p>¿No tienes una cuenta? <a href="#" id="register-link">Regístrate aquí</a></p>
+    </div>
+
+    <!-- Sección de Registro -->
+    <div id="register-screen" class="screen" style="display: none;">
+        <h2>Registro</h2>
+        <form id="register-form">
+            <label for="register-username">Usuario:</label>
+            <input type="text" id="register-username" required>
+            <br>
+            <label for="register-password">Contraseña:</label>
+            <input type="password" id="register-password" required>
+            <br>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p id="register-success" style="color: green; display: none;">Registro exitoso. Redirigiendo al login...</p>
+        <p>¿Ya tienes una cuenta? <a href="#" id="login-link">Inicia sesión aquí</a></p>
+    </div>
+
+    <!-- Sección de Ficha Médica -->
+    <div id="medical-form-screen" class="screen" style="display: none;">
+        <h2>Ficha Médica</h2>
+        <form id="medical-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" disabled>
+            <br>
+
+            <label for="document-number">Documento de identidad:</label>
+            <input type="text" id="document-number" disabled>
+            <br>
+
+            <label for="blood-type">Tipo de Sangre:</label>
+            <input type="text" id="blood-type" disabled>
+            <br>
+
+            <label for="eps">IPS/EPS:</label>
+            <input type="text" id="eps" disabled>
+            <br>
+
+            <label for="contact">Teléfono de Contacto:</label>
+            <input type="text" id="contact" disabled>
+            <br>
+
+            <label for="diseases">Enfermedades Padecidas:</label>
+            <textarea id="diseases" disabled></textarea>
+            <br>
+
+            <button type="button" id="edit-button">Editar</button>
+            <button type="submit" id="save-button" style="display: none;">Guardar</button>
+            <p id="save-message" style="color: green; display: none;">Información guardada exitosamente.</p>
+        </form>
+        <button id="logout-button">Cerrar Sesión</button>
+    </div>
+
+    <!-- Sección de Nosotros -->
+    <div id="nosotros-screen" class="screen" style="display: none;">
+        <h2>Nosotros</h2>
+        <p>Información sobre nuestra empresa...</p>
+    </div>
+
+    <!-- Sección de Contacto -->
+    <div id="contacto-screen" class="screen" style="display: none;">
+        <h2>Contacto</h2>
+        <p>Información de contacto...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
